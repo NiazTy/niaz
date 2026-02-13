@@ -1,59 +1,44 @@
 <script lang="ts" setup>
-  useSeoMeta({
-    title: 'Home Page',
-    description: 'Welcome to the home page of our application.',
-  });
+useSeoMeta({
+  title: 'Home | Zakky Pusponegoro',
+  description: 'Portfolio pribadi Muhammad Zakky Pusponegoro',
+});
+
+const contact = () => {
+  window.location.href = "mailto:emailkamu@gmail.com";
+};
 </script>
 
 <template>
-  <main aria-label="Hero-Section" class="text-[#98A1C4]">
-    <div class="min-h-screen flex flex-col justify-end">
-      <div class="flex flex-col md:mt-0 mt-52 md:flex-row mx-8 items-center justify-center md:justify-around">
-        <div class="space-y-4 md:text-start text-center animate-fade-in">
-          <h2 class="font-paragraph text-xl">
-            Be The One with World!
-          </h2>
-          <h1 class="py-4 font-paragraph border-b-2 group cursor-default">
-            <span class="text-3xl">Hello, I'm</span><br>
-            <span class="text-3xl transition-all duration-300 group-hover:tracking-widest group-hover:text-black">
-              Muhammad Zakky Pusponegoro
-            </span>
-          </h1>
-
-          <div class="flex md:justify-start justify-center gap-4 pt-2 text-sm">
-            <a href="https://github.com/NiazTy" target="_blank" class="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">~GitHub</a>
-            <a href="https://www.instagram.com/m.niazyk" target="_blank" class="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">~Instagram</a>
-            <a href="https://www.linkedin.com/in/muhammad-zakky-pusponegoro-ab6579287/" target="_blank" class="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">~LinkedIn</a>
-          </div>
-          <p class="font-paragraph text-sm max-w-md">
-            A high school student who is passionate about technology, programming, and web development. Always eager to learn and explore new things in the tech world.
-          </p>
-        </div>
-        <div>
-          <img
-            src="https://niaz.my.id/public/asset/ezgif-6-709821b3dc.gif"
-            alt="Profile Picture"
-            class=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="md:absolute hidden bottom-6 left-1/2 -translate-x-1/2 animate-bounce text-sm opacity-70">
-      <a href="#interests">Scroll ↓</a>
-    </div>
-  </main>
-  <section id="interests" aria-label="Interests and Projects" class="min-h-screen bg-[#98A1C4] px-8 text-white animate-fade-in flex flex-col justify-center">
-    <div class="my-16 space-y-12 max-w-6xl mx-auto">
-      <div class="text-center space-y-2">
-        <h2 class="font-paragraph text-2xl">
-          Things I Love Exploring
-        </h2>
-        <p class="text-sm opacity-80">
-          Hover around — each interest has its own story.
+  <section class="min-h-screen bg-[#f8f6ee] flex items-center justify-center px-6 md:px-12">
+    <div class="max-w-7xl w-full grid md:grid-cols-2 mt-40 mb-10 gap-12 items-center">
+      <div class="space-y-6">
+        <p class="text-lg font-semibold tracking-wide text-gray-700 fade-up">Halo! Saya</p>
+        <h1 class="text-4xl md:text-6xl xl:text-7xl font-black leading-tight tracking-wide fade-up delay-100">
+          MUHAMMAD <br />
+          ZAKKY <br />
+          PUSPONEGORO
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-lg leading-relaxed fade-up delay-200">
+          Seorang <i>fresh graduate</i> dari SMAN 1 Mejayan yang tertarik di bidang <b>kreatif</b> dan <b>kepenulisan</b>.
+          Saya senang membuat karya visual, cerita, dan ide yang bermakna.
         </p>
+        <div class="flex gap-4 flex-wrap fade-up delay-300">
+          <button @click="contact" class="bg-[#1a1b27] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            Hubungi Saya
+          </button>
+          <a href="/cv.pdf" download>
+            <button class="border-2 border-[#1a1b27] text-[#1a1b27] px-8 py-3 rounded-full font-semibold hover:bg-[#1a1b27] hover:text-white transition duration-300">
+              Download CV
+            </button>
+          </a>
+        </div>
       </div>
-      <AppLayoutCardsProject />
+      <div class="fade-up delay-200">
+        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl hover:scale-[1.02] transition duration-500">
+          <img src="/images/foto-aku.png" alt="profile" class="w-full h-112.5 md:h-150 object-cover" />
+        </div>
+      </div>
     </div>
   </section>
-  <AppLayoutCardsContact />
 </template>

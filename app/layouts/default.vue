@@ -4,15 +4,15 @@ const open = ref(false);
 const menus = [
     { name: "Home", to: "/" },
     { name: "About", to: "/about-me" },
-    { name: "Project", to: "#project" },
-    { name: "Contact", to: "#contact" },
+    { name: "Portofolio", to: "/portofolio" },
+    { name: "Blog", to: "/blog" },
 ];
 </script>
 
 <template>
     <header class="fixed top-0 left-0 w-full z-50 bg-[#f8f6ee]/80 backdrop-blur-md border-b border-gray-200">
         <nav class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-            <a href="#" class="font-black text-lg tracking-widest">ZAKKY</a>
+            <a href="/" class="font-black text-lg tracking-widest">ZAKKY</a>
             <ul class="hidden md:flex gap-10 font-medium text-gray-700">
                 <li v-for="menu in menus" :key="menu.name">
                     <a :href="menu.to" class="relative group">

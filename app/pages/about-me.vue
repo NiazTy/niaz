@@ -68,7 +68,6 @@ const activities = [
   },
 ];
 
-
 const audioRef = ref<HTMLAudioElement | null>(null);
 const playing = ref(false);
 
@@ -143,6 +142,54 @@ onMounted(() => {
 </script>
 
 <template>
+  <section class="bg-[#f8f6ee]">
+      <div id="header-about" class="flex pt-52 pb-16 px-8 lg:px-0 md:justify-around">
+          <div class="flex flex-col">
+              <h1 class="text-6xl font-snpro text-paragraph">ABOUT ME</h1>
+              <p class="text-2xl font-snpro text-paragraph">MUHAMMAD ZAKKY PUSPONEGORO</p>
+              <div class="w-1/2 mt-4 border-2 border-paragraph rounded-2xl"></div>
+          </div>
+          <div></div>
+      </div>
+  </section>
+  <section class="bg-[#1a1b27] relative">
+    <div class="wave-container"></div>
+    <div class="relative z-10 flex flex-col items-center w-full gap-16 px-6 py-24 md:px-24 lg:flex-row md:justify-between">
+      <div class="basis-1/2">
+        <p class="text-lg leading-relaxed font-roboto text-[#f8f6ee]/90">
+          Halo, saya Muhammad Zakky Pusponegoro di dunia maya saya sering lebih dikenal dengan nama Niaz. Saya merupakan seorang pelajar di SMAN 1 Mejayan. Saat ini saya sedang berada di kelas XII jurusan peminatan teknik.
+        </p>
+      </div>
+      <div class="basis-1/2 text-center lg:text-right">
+        <h2 class="text-5xl font-extrabold font-roboto text-[#f8f6ee] tracking-tight">
+          Muhammad Zakky Pusponegoro
+        </h2>
+      </div>
+    </div>
+    <div class="relative z-10 px-6 md:px-24">
+      <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+        <img src="/images/ini-aku-yang-capek.jpg"
+            class="w-full object-cover hover:scale-[1.02] transition duration-700"
+            alt="Ini Aku Yang Capek">
+      </div>
+    </div>
+    <div class="relative z-10 px-6 py-16 md:px-48">
+      <div class="tracking-wide space-y-8">
+        <p class="text-lg leading-relaxed font-roboto text-[#f8f6ee]/90 text-justify">
+          Sekolah di SMAN 1 Mejayan bikin aku sadar kalau kehidupan SMA tuh nggak seindah yang ditayangin di film. Nggak ada tuh kisah cinta manis atau petualangan seru—yang ada malah kayak filler dalam anime yang pengen cepet-cepet diskip. Tapi ya, untungnya aku lumayan berprestasi di sekolah, jadi nggak sepenuhnya sia-sia juga.
+        </p>
+        <p class="text-lg leading-relaxed font-roboto text-[#f8f6ee]/90 text-justify">
+          Oke, cukup soal latar belakang. Dalam hidup, aku selalu pegang satu motto: “Dunia ini panggung sandiwara, jadi nikmati aja tiap momennya dan ketawain meski itu hal sepele sekalipun!” Intinya sih: hidup tuh dinikmati aja, bahkan saat lagi nyungsep. Wih, filosofis banget ya? Hehe.
+        </p>
+        <p class="text-lg leading-relaxed font-roboto text-[#f8f6ee]/90 text-justify">
+          Dulu aku sering ngelakuin hal-hal nggak jelas dan nggak produktif, tapi sejak kenal dunia komputer dan logika... hidupku malah makin rumit. Serius, main-main sama logika itu capek—nguras otak dan kadang bikin mikir, “Ini beneran hal yang aku suka nggak sih?” Tapi ya gitu, tetap aja dijalanin.
+        </p>
+        <p class="text-lg leading-relaxed font-roboto text-[#f8f6ee]/90 text-justify">
+          Oh ya, aku suka dengerin lagu-lagu dari Togenashi Togeari, Deco*27, Leo/Need sama She Is Legend. Meskipun sebagian merupakan musik J-Pop, yang penting lagunya masih bisa dinikmati—soalnya enak banget. Aku juga suka nonton film, anime sama series, kadang baca buku juga sih... tapi biasanya setelah capek main game.
+        </p>
+      </div>
+    </div>
+  </section>
   <section
     id="about"
     ref="sectionRef"

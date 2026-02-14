@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+useSeoMeta({
+  title: 'Portfolio - Muhammad Zakky Pusponegoro',
+  description: 'Halaman portfolio yang menampilkan karya-karya visual, cerita, dan ide-ide kreatif Muhammad Zakky Pusponegoro.',
+});
 import { portfolioData } from "@/data/portfolioData";
 
 const quotes = [
@@ -65,7 +69,7 @@ onUnmounted(() => {
     <section class="bg-[#f8f6ee]">
       <div id="header-about" class="flex pt-52 pb-16 px-8 lg:px-0 md:justify-around">
           <div class="flex flex-col">
-              <h1 class="text-6xl font-snpro text-paragraph">PORTOFOLIO</h1>
+              <h1 class="text-4xl md:text-6xl font-snpro text-paragraph">PORTOFOLIO</h1>
               <p class="text-2xl font-snpro text-paragraph">MUHAMMAD ZAKKY PUSPONEGORO</p>
               <div class="w-1/2 mt-4 border-2 border-paragraph rounded-2xl"></div>
           </div>
@@ -125,7 +129,7 @@ onUnmounted(() => {
   </section>
   <section class="bg-[#f8f6ee] max-h-4xl my-auto py-32 px-6">
   <div class="flex flex-col items-center text-center space-y-16">
-        <h2 class="text-4xl font-black tracking-wide">Quotes & Reflections</h2>
+        <h2 class="text-4xl font-black tracking-wide">Quotes</h2>
         <div class="relative">
             <transition name="fade" mode="out-in">
                 <blockquote

@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+useSeoMeta({
+  title: 'About Me - Muhammad Zakky Pusponegoro',
+  description: 'Halaman tentang Muhammad Zakky Pusponegoro, seorang pelajar yang tertarik di bidang kreatif dan kepenulisan. Temukan karya-karya visual, cerita, dan ide-ide kreatif yang bermakna.',
+});
 import {
   GraduationCap,
   Cpu,
@@ -15,28 +19,28 @@ const timeline = [
     year: "Awal SMA",
     title: "Realita Sekolah",
     text: "SMA nggak seindah film. Lebih banyak filler episode, tapi justru di situ aku belajar bertahan dan menerima realita.",
-    img: "/images/photograph/IMG_0056.webp",
+    img: "/images/aku-sma.webp",
     icon: GraduationCap,
   },
   {
     year: "Prestasi",
     title: "Tetap Berusaha",
     text: "Walaupun terasa biasa saja, aku tetap fokus belajar dan berprestasi supaya waktuku nggak terbuang sia-sia.",
-    img: "/images/photograph/IMG_0056.webp",
+    img: "/images/prestasi-aku.jpg",
     icon: BookOpen,
   },
   {
-    year: "Kenal Komputer",
-    title: "Logika & Teknologi",
-    text: "Mulai kenal dunia komputer dan logika. Capek, tapi di sinilah aku belajar berpikir sistematis dan problem solving.",
-    img: "/images/photograph/IMG_0056.webp",
+    year: "Saling Bekerja Sama",
+    title: "Bekerja Sama",
+    text: "Kerja sama dengan teman-teman di sekolah dan komunitas kreatif bikin aku belajar banyak hal baru.",
+    img: "/images/kerja-sama.jpg",
     icon: Cpu,
   },
   {
-    year: "Hobi & Inspirasi",
-    title: "Musik, Film, & Cerita",
-    text: "J-Pop, anime, film, series — semuanya jadi sumber inspirasi buat ide, cerita, dan karya kreatifku.",
-    img: "/images/photograph/IMG_0056.webp",
+    year: "Pengalaman Tak Terlupakan",
+    title: "Banyak Hal yang Terjadi di SMA",
+    text: "Banyak pengalaman yang nggak terlupakan selama SMA, baik yang manis maupun yang pahit. Semua itu jadi bagian dari perjalanan hidupku.",
+    img: "/images/pengalaman-aku.jpg",
     icon: Music,
   },
 ];
@@ -213,7 +217,7 @@ onMounted(() => {
           sebagai panggung sandiwara — dijalani saja, bahkan saat jatuh.
         </p>
       </div>
-      <div class="relative">
+      <div class="hidden md:relative md:block">
         <div class="absolute left-1/2 top-0 w-0.5 h-full bg-gray-200 -translate-x-1/2" />
         <div
           class="absolute left-1/2 top-0 w-0.5 bg-[#1a1b27] -translate-x-1/2 transition-all duration-200"
@@ -237,6 +241,31 @@ onMounted(() => {
                 <img :src="item.img" class="w-full h-64 object-cover" />
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="md:hidden relative">
+        <div class="absolute left-3 top-0 w-0.5 h-full bg-gray-300" />
+        <div class="space-y-12 relative">
+          <div
+            v-for="item in timeline"
+            :key="'mobile-'+item.title"
+            class="pl-10 relative"
+          >
+            <div class="absolute left-0 top-2 w-5 h-5 bg-[#1a1b27] rounded-full border-4 border-[#f8f6ee]" />
+            <p class="text-xs text-gray-400 mb-1">
+              {{ item.year }}
+            </p>
+            <h3 class="text-lg font-semibold mb-2">
+              {{ item.title }}
+            </h3>
+            <p class="text-sm text-gray-600 mb-4">
+              {{ item.text }}
+            </p>
+            <img
+              :src="item.img"
+              class="w-full h-48 object-cover rounded-xl shadow-lg"
+            />
           </div>
         </div>
       </div>
